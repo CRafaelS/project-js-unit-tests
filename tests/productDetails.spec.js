@@ -52,12 +52,12 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
 
   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
-    expect()
-    fail('Teste vazio!');
+    expect(productDetails('Alcool gel', 'Mascara')).not.toBe(productDetails('Alcool gel', 'Mascara'))
   });
   
-//   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
-//     // Teste se os dois productIds terminam com 123.
-//     expect(typeof productDetails('Alcool gel', 'Máscara')).toBe('object');
-//   });
+  it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
+    // Teste se os dois productIds terminam com 123.
+    expect(productDetails('Alcool gel', 'Mascara').productId).toMach('123')
+    //fail('Teste vazio!');
+  });
 });
