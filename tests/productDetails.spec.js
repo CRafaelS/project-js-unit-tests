@@ -57,7 +57,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
   
   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
     // Teste se os dois productIds terminam com 123.
-    expect(productDetails('Alcool gel', 'Mascara').productId).toMach('123')
-    //fail('Teste vazio!');
+    expect(productDetails('Alcool gel', 'Mascara')[0].details.productId).toMatch('123');
+    expect(productDetails('Alcool gel', 'Mascara')[1].details.productId).toMatch('123');
   });
 });
